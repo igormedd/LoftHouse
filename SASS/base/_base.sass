@@ -1,0 +1,77 @@
+html
+    font-size: 10px
+
+body
+    color: $white
+    font-family: $font-main
+    background-color: $dark
+    font-size: 1.6rem
+
+a
+    color: $white
+    transition: .2s all ease
+    &:hover
+        color: $accent
+
+.container
+    
+    max-width: 114rem
+    padding: 0 1.5rem
+    margin: 0 auto
+    &__small
+        max-width: 114rem
+
+
+.text-right
+    text-align: right
+
+.visually-hidden
+    // сделано для поисковиков
+    height: 0.1rem
+    overflow: hidden 
+    width: 0.1rem
+
+
+    // уводит в невидимую зону, не влияет на лэйаут после него
+    position: absolute
+
+    // Убирает любые видимые части
+    clip: rect(0.1rem 0.1rem 0.1rem 0.1rem)
+    clip: rect(0.1rem 0.1rem 0.1rem 0.1rem)
+    clip-path: inset(50%)  
+    /* browsers in the future */ 
+
+    white-space: nowrap
+
+.none
+    display: none !important
+
+
+.title-2 
+    font-size: 36px;
+    font-family: $font-accent;
+    color: $accent;
+    font-weight: 700;
+
+    
+    
+.link-bold
+    color: $accent
+    font-weight: 700
+   
+
+.title-first
+    color: $color-white
+    &__main
+        display: block
+        animation-name: LeftToRight
+        animation-duration: 2s
+        animation-delay: 1s
+        animation-timing-function: ease
+    &__secondary
+        display: block
+        animation-name: RightToLeft
+        animation-duration: 2s
+        animation-delay: 1s
+        animation-timing-function: ease
+        back

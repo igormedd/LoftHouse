@@ -1,0 +1,59 @@
+.footer 
+    background-color: $footer-bg
+    padding-top: 7.2rem 
+    padding-bottom: 5.1rem
+    font-size: 1.4rem
+    letter-spacing: 0.05rem
+
+    @include mediaTablet
+        padding-top: 3.6rem
+        padding-bottom: 2.55rem
+
+.footer__grid 
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 3rem
+
+    @include mediaTablet
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr))
+        gap 4rem 3rem
+
+.footer__logo 
+    margin-top: -1.2rem
+
+    @include mediaTablet
+        margin-top: -0.6rem
+
+.footer__nav
+    display: grid
+    gap: 1.5rem
+    
+
+    
+
+.footer-link
+    font-weight: 400
+    letter-spacing: .2rem
+    line-height: 227%
+    display: block
+    transition: all .7s ease
+    &:hover
+        color: $accent
+        transform: scale(1.3, 1.6)
+
+
+
+.footer__adress 
+    display: grid
+    gap: 2rem
+
+.footer__socials
+    display: flex
+    align-items: center
+    column-gap: 2.2rem
+    
+    
+.icon
+    display: inline-block
+    &:hover
+        transform: scale(1.0) scale(1.2)

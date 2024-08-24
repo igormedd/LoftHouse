@@ -1,0 +1,60 @@
+.video 
+    text-align: center
+    position: relative
+
+    &::after
+        content: "IV"
+        left: calc(50% + 55.5rem)
+        transform: translate(-50%, 0)
+        @include decorNumber
+        line-height: 1.1
+
+    @include mediaTablet
+        &::after
+            font-size: 6rem
+            left: auto
+            right: 1rem
+            transform: none
+
+
+
+.video__link 
+    position: relative
+    display: inline-block
+    text-align: center
+    
+
+    &::before
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 100%
+        background-color: rgba(36, 43, 51, 0.8)
+        transition: background-color 0.2s ease-in
+
+    &:hover::before
+        background-color: rgba(36, 43, 51, 0.7)
+
+    @include mediaTablet
+
+
+.video__icon
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: all 0.2s ease-in
+
+    @include mediaTablet
+        width: 8rem
+        height: 8rem
+    
+.video__link:hover .video__icon
+    transform: translate(-50%,-50%) scale(1.2)
+    filter: saturate(1.5)
+
+
+
+.video__img

@@ -1,0 +1,23 @@
+@mixin decorNumber
+        position: absolute
+        top: 0
+        line-height: 1.1
+
+        opacity: 0.02
+        font-size: 40rem
+        font-family: $font-accent
+        z-index: -1
+
+@mixin mediaTablet 
+    @media screen and (max-width: $tablet)
+        @content
+
+@mixin mediaMobile 
+    @media screen and (max-width: $mobile)
+        @content
+
+
+@mixin container
+    max-width: 114rem
+    padding: 0 1.5rem
+    margin: 0 auto

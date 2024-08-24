@@ -1,0 +1,85 @@
+.card
+    display: block
+    position: relative
+    display: inline-block
+    color: $white
+    overflow: hidden
+
+    &::before
+        content: ""
+
+        position: absolute
+        z-index: 6
+        left: 0
+        top: 0
+        height: 100%
+        width: 100%
+        background: linear-gradient(180deg, rgba(36, 43, 51, 0) 0%, $dark 100%)
+        
+
+    &::after
+        content: ""
+        position: absolute
+        z-index: 7
+        left: 1.5rem
+        top: 1.5rem
+        right: 1.5rem
+        bottom: 1.5rem
+        border: 0.3rem double rgba(255,255,255,0.4 )
+        opacity: 0
+
+        transition: opacity 0.2s ease-in
+    &:hover
+        color: $white
+
+    &:hover::after
+        opacity: 1
+
+    @include mediaTablet 
+        &::after 
+            left: 1rem
+            top: 1rem
+            right: 1rem
+            bottom: 1rem
+
+
+.card__img
+    transition: all 0.2s ease-in
+    position: relative
+    z-index: 5
+    height: 100%
+    width: 100%
+    object-fit: cover
+
+    @include container
+
+    @include mediaTablet
+        height: auto
+        width: 100%
+
+.card:hover .card__img
+    transform: scale(1.1)
+    filter: contrast(110%) brightness(1.2) saturate(1.2)
+    
+
+
+.card__title    
+    position: absolute
+    z-index: 9
+    left: 5rem
+    bottom: 4.4rem
+    right: 2rem
+    font-size: 2.4rem
+
+    @include mediaTablet 
+        left: 2rem
+        right: 2rem
+        bottom: 2rem
+        font-size: 2rem
+        text-align: center
+
+
+
+   
+        
+ 

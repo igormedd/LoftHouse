@@ -1,0 +1,51 @@
+.form 
+
+.form__input 
+    height: 5rem
+    padding: 1.2rem
+    text-align: center
+    background-color: rgba(255, 255, 255, 0.2)
+    color: $white
+    font-size: 1.4rem
+    transition: background-color 0.2s ease-in
+
+    &::placeholder
+        color: $placeholder
+
+    &:focus 
+        background-color: rgba(255, 255, 255,0.4 )
+
+    @include mediaTablet
+        width: 100%
+
+
+.form__privacy
+    font-size: 1.3rem
+    color: #e7e7e7
+    text-align: center
+    line-height: 1.23
+    
+    &--bottom
+        @include mediaTablet
+            grid-row: 4 / 5
+
+
+.form__btn 
+    height: 5rem
+    padding: 1.2rem 0
+    font-size: 1.6rem
+    color: $white
+    font-weight: 700
+    text-align: center
+    background-color: $accent
+    transition: background-color 0.2s ease-in
+
+
+    &:hover
+        background-color: saturate($accent,10% )
+
+    @include mediaTablet
+        width: 100%
+        padding: 1.2rem
+        font-size: 1.4rem
+        
